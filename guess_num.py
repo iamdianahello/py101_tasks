@@ -1,3 +1,5 @@
+from random import randint
+
 """
 Программа генерирует число от 0 до 1_000_000 и предлагает угадать его.
 
@@ -14,5 +16,28 @@
 Тебе может понадобится модуль random, цикл while и ветвления
 """
 
+
+def random_game():
+    random_int = randint(0, 1000000)
+    print(random_int)
+    ugadal = False
+    while(not ugadal):
+        attempt_int = input('просьба ввести число ')
+        if (attempt_int == '') or (attempt_int == 'exit'):
+            print('выходим так выходим')
+            break
+        elif (not attempt_int.isdigit()):
+            print('не число. А надо число ')
+        elif (not 0 <= int(attempt_int) <= 1000000):
+            print('от нуля до миллиона. Такие правила ')
+        elif (random_int > int(attempt_int)):
+            print('бери больше ')
+        elif (random_int < int(attempt_int)):
+            print('перебор, надо меньше ')
+        elif (random_int == int(attempt_int)):
+            print('бесполезно проведенное время, но число верное, ура! ')
+            break
+
+
 if __name__ == '__main__':
-    pass
+    random_game()

@@ -8,5 +8,17 @@
 Тебе может понадобиться цикл for и ветвления
 """
 
+def do_zipzap():
+    for range_element in range(0, 100):
+        if(range_element) % 15 == 0:
+            print('zip-zap')
+        elif(range_element) % 3 == 0:
+            print('zip')
+        elif(range_element) % 5 == 0:
+            print('zap')
+        else:
+            print(range_element)
+
+
 if __name__ == '__main__':
-    pass
+    do_zipzap()
