@@ -48,5 +48,19 @@ is_keyword('def')
 def get_type(data_to_detect_type):
     if(type(data_to_detect_type) == str):
         print('Это строка')
+    if(type(data_to_detect_type) == int):
+        print('Это число')
+    if(type(data_to_detect_type) == bool):
+        print('Это булевый')
+    if(type(data_to_detect_type) == None):
+        print('Это None')
+    if(type(data_to_detect_type) == list):
+        print('Это список')
+    if(type(data_to_detect_type) == tuple):
+        print('Это кортеж')
+    if(type(data_to_detect_type) == set):
+        print('Это мноожество')
+    if(type(data_to_detect_type) == dict):
+        print('Это словарь')
 
 get_type('hhh')

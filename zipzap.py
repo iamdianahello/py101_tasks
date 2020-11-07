@@ -9,7 +9,7 @@
 """
 
 def do_zipzap():
-    for range_element in range(0, 100):
+    for range_element in range(0, 101):
         if(range_element) % 15 == 0:
             print('zip-zap')
         elif(range_element) % 3 == 0:
